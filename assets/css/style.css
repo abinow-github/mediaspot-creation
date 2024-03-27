@@ -2,3 +2,244 @@
     --primary-clr:#004d65;
     --sub-clr:#008caf;
 }
+/* ........................common styles ............................ */
+html::-webkit-scrollbar { /* right side scroll bar */
+    display: none;
+  }
+@media screen and (max-width:765px) {
+    .hide-sm{
+        display: none !important;
+    }
+}
+@media screen and (min-width:765px) and (max-width:992px) {
+    .hide-md{
+        display: none !important;
+    }
+}
+@media screen and (min-width:1000px) {
+    .hide-lg{
+        display: none !important;
+    }
+}
+
+/*==================================================================
+                        navbar 1
+==================================================================*/
+header{
+    .main-navbar{
+        border-bottom: 1px solid #ccc;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        .input-group .form-control:focus{
+            box-shadow: none;
+        }
+    }
+    .main-navbar .top-navbar{
+        background-color: #dddddd;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .main-navbar .top-navbar .brand-name{
+        color: #fff;
+    }
+    .main-navbar .top-navbar .nav-link{
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .main-navbar .top-navbar .dropdown-menu{
+        padding: 0px 0px;
+        border-radius: 0px;
+    }
+    .main-navbar .top-navbar .dropdown-menu .dropdown-item{
+        padding: 8px 16px;
+        border-bottom: 1px solid #ccc;
+        font-size: 14px;
+    }
+    .main-navbar .top-navbar .dropdown-menu .dropdown-item i{
+        width: 20px;
+        text-align: center;
+        color: #2874f0;
+        font-size: 14px;
+    }
+    .main-navbar .navbar{
+        padding: 0px;
+        background-color: #ddd;
+    }
+    .main-navbar .navbar .nav-item .nav-link{
+        padding: 8px 20px;
+        color: #000;
+        font-size: 15px;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .main-navbar .top-navbar .nav-link{
+            font-size: 12px;
+            padding: 8px 10px;
+        }
+    }
+}
+/*==================================================================
+                        navbar 1 END
+==================================================================*/
+
+
+/*==================================================================
+                        navbar 2 
+==================================================================*/
+header .navbar-2{
+    margin-top: 80px;
+    background-color: var(--primary-clr);
+    .nav-item{
+        border-radius: 5px 5px 0 0 ;
+        transition: background 0.5s;
+    }
+    .nav-item .nav-link{
+        color: white;
+        font-weight: bold;
+    }
+    .nav-item .nav-2-dropdown-menu-div{
+        position: absolute;
+        bottom: -10px;
+        transform: translateY(100%);
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 50vh;
+        background-color: white;
+        transition: 0.5s;
+        padding: 10px;
+        opacity: 0;
+        .img-div,.primary-ul-div,.secondary-ul-div{
+            width: 300px;
+        }
+    }
+    .nav-item:hover{
+        background-color: white;
+        color: white;
+        .nav-link{
+            color: var(--primary-clr);
+        }
+    }
+}
+header .navbar-2 .nav-item:hover .nav-2-dropdown-menu-div,
+header .navbar-2 .nav-2-dropdown-menu-div:hover {
+    z-index: 3;
+    bottom: 0px;
+    opacity: 1;
+}
+/*==================================================================
+                        navbar 2 END
+==================================================================*/
+
+
+
+
+/*==================================================================
+                        first carousel 
+==================================================================*/
+.first-carousel-div{
+    .carousel {
+        height: 400px;
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    h1 {
+        color: #333
+    }
+    
+    .carousel-inner {
+        height: 100%;
+        /* min-width: 400%; */
+        display: flex;
+        transition: all ease .5s;
+    }
+    
+    .carousel-item {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .carousel-item h1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .carousel-controls .prev {
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('prev.svg');
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        opacity: .5;
+    }
+    
+    .carousel-controls .next {
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('next.svg');
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        opacity: .5;
+    }
+    
+    .prev:hover,
+    .next:hover {
+        opacity: 1;
+    }
+    
+    .carousel-indicators {
+        position: absolute;
+        bottom: 12px;
+        text-align: center;
+    }
+    
+    .carousel-indicators span {
+        display: inline-block;
+        background-color: white;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        opacity: .5;
+        cursor: pointer;
+        margin: 3px;
+    }
+    
+    .carousel-indicators span.active {
+        opacity: 1;
+    }
+    
+    footer {
+        font-size: 13px;
+        color: #333;
+    }
+}
+/*==================================================================
+                        first carousel END
+==================================================================*/
