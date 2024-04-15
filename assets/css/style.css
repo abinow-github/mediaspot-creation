@@ -348,9 +348,13 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
         padding: 80px 30px;
         border-radius: 10px;
         overflow: hidden;
+        border: 0;
+        background: linear-gradient(178deg, #004d65, #1da0c1);
         .card-title{
             font-weight: bolder;
             text-transform: uppercase;
+            color: white;
+            z-index: 5;
         }
         .card-img{
             height: 150px;
@@ -358,6 +362,7 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
             position: absolute;
             right: 10px;
             bottom: 10px;
+            z-index: 3;
         }
         .card-img-shadow{
             height: 150px;
@@ -368,30 +373,166 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
             mask-image: linear-gradient(transparent 50%, white 90%);
             -webkit-mask-image: linear-gradient(transparent 50%, white 90%);
         }
+        .shape{
+            position: absolute;
+            z-index: 2;
+            background-size: cover;
+        }
+        .pattern{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            top: 0;
+            left: 0;
+        }
     }
     .d-grid .item:nth-child(1){
         grid-area: item1;
+        .shape{
+            position: absolute;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 14px 0 rgb(0 0 0 / 37%);
+            backdrop-filter: blur(0.5px);
+            -webkit-backdrop-filter: blur(0.5px);
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 50%;
+            background: url(../img/personalized/mug.jpg);
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(0 42%, 0 0, 100% 29%, 100% 100%, 0% 100%);
+        }
+        .pattern{
+            --s: 80px;
+    --c: #c1e9cc00;
+    --_s: calc(2* var(--s)) calc(2* var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%, #ffffff24 68% 70%, #0000 72%;
+    background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) / var(--_s),
+     radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s),
+      radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s), radial-gradient(var(--_g) 0 75%,
+       var(--_c)) 0 0 / var(--_s), repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s),
+        radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s) var(--c);
+        }
     }
     .d-grid .item:nth-child(2){
         grid-area: item2;
+        .shape{
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: url(../img/personalized/funplate.jpg);
+            background-size: cover;
+            clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+            background-position: bottom;  
+        }
+        .pattern{
+            --s: 140px;
+    --_g: #0000 52%, #ffffff24 /* first color */ 54% 57%, #0000 59%;
+    background: radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0 calc(var(--s) / 2),
+     radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s) / 2) 0,
+      radial-gradient(farthest-side at 133.33% 50%, var(--_g)), radial-gradient(farthest-side at 50% -33.33%, var(--_g)), #67917a00;
+    background-size: calc(var(--s) / 4.667) var(--s), var(--s) calc(var(--s) / 4.667);
+        }
     }
     .d-grid .item:nth-child(3){
         grid-area: item3;
+        .shape{
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: url(../img/personalized/test\ tube\ planter.jpg);
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+        }
+        .pattern{
+            background: linear-gradient(135deg, #70809000 21px, #d9ecff14 22px, #d9ecff1c 24px, transparent 24px, transparent 67px, #d9ecff21 67px, #d9ecff1a 69px, transparent 69px), linear-gradient(225deg, #70809000 21px, #d9ecff17 22px, #d9ecff12 24px, transparent 24px, transparent 67px, #d9ecff21 67px, #d9ecff17 69px, transparent 69px) 0 64px;
+            background-color: #70809000;
+            background-size: 64px 128px;
+        }
     }
     .d-grid .item:nth-child(4){
         grid-area: item4;
+        .shape{
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: url(../img/personalized/led\ photo\ frame.jpg);
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+        }
     }
     .d-grid .item:nth-child(5){
         grid-area: item5;
+        .shape{
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: url(../img/personalized/keychain.jpg);
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+        }
     }
     .d-grid .item:nth-child(6){
         grid-area: item6;
+        .shape{
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: url(../img/personalized/photoframe.jpg);
+            background-size: cover;
+            clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+            background-position: center;  
+        }
     }
     .d-grid .item:nth-child(7){
         grid-area: item7;
+        .shape{
+            width: 50%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: url(../img/personalized/uv\ photo\ frame.jpg);
+            background-size: cover;
+            clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+            background-position: top;  
+        }
     }
     .d-grid .item:nth-child(8){
         grid-area: item8;
+        .shape{
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            left: 0;
+            background: url(../img/personalized/caricature.jpg);
+            background-size: cover;
+            clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 100%); 
+        }
+    }
+}
+@media screen and (max-width:770px) {
+    .sctn-3.personalized{
+        .d-grid{
+            grid-template-areas: 'item1 item1 item2 item2'
+                                 'item1 item1 item2 item2'
+                                 'item3 item3 item4 item4'
+                                 'item3 item3 item4 item4'
+                                 'item5 item5 item6 item6'
+                                 'item5 item5 item6 item6'
+                                 'item7 item7 item8 item8'
+                                 'item7 item7 item8 item8';
+                       gap: 10px;
+        }
     }
 }
 /*==================================================================
