@@ -49,3 +49,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+
+/////////wishlist button click
+$(".button").click(function() {
+    if ( $(this).hasClass( "deactivate" ) ) {
+      $(this).removeClass("deactivate")
+    }
+    if ( $(this).hasClass( "active" ) ) {
+      $(this).addClass("deactivate")
+    }
+    $(this).toggleClass("animate");
+    $(this).toggleClass("active");
+    $(this).toggleClass("inactive");
+  });
