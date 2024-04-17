@@ -581,16 +581,16 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
         }
     }
     .col-lg-3:nth-child(1) .card{
-        background: radial-gradient(#e3a1a1 1%, #b14949 90%);
+        background: radial-gradient(#e3a1a1 10%, #ffffff 70%);
     }
     .col-lg-3:nth-child(2) .card{
-        background: radial-gradient(#c1d791 1%, #90b149 90%);
+        background: radial-gradient(#beda81 10%, #ffffff 70%);
     }
     .col-lg-3:nth-child(3) .card{
-        background: radial-gradient(#d8db9c 1%, #afb71b 90%);
+        background: radial-gradient(#e8ef68 10%, #ffffff 70%);
     }
     .col-lg-3:nth-child(4) .card{
-        background: radial-gradient(#aeaae1 1%, #5049b1 90%);
+        background: radial-gradient(#a49eee 10%, #ffffff 70%);
     }
 }
 @media screen and (max-width:765px) {
@@ -603,4 +603,129 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
 }
 /*==================================================================
                         section-4 branded gifts END
+==================================================================*/
+
+
+
+
+
+/*==================================================================
+                        section-6 recomeneded products
+==================================================================*/
+.sctn-6.recommended{
+    .title-row{
+        .title{
+            text-transform: capitalize;
+        }
+    }
+    .col-6{
+        margin-bottom: 30px;
+    }
+    .card{
+        border: 1px solid #80808059;
+        overflow: hidden;
+        border: 0;
+        height: 100%;
+        .img-div{
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            .offer{
+                position: absolute;
+                padding: 5px 10px;
+                bottom: 0px;
+                transform: translateY(110%);
+                left: 10px;
+                color: white;
+                border-radius: 5px;
+                background: linear-gradient(356deg, #22a86a, #84dab2);
+                transition: 0.4s;
+            }
+        }
+        .card-body{
+            position: relative;
+            .name{
+                text-transform: capitalize;
+                color: rgb(90, 85, 85);
+            }
+            .price-div{
+                display: flex;
+                gap: 5px;
+                font-size: 16px;
+                font-weight: 500;
+                .old-price{
+                    text-decoration: line-through;
+                    color: gray;
+                }
+                .crossline{
+                    width: 2px;
+                    height: 100%;
+                    background-color: grey;
+                }
+                .new-price{
+                    color: rgb(54, 192, 54);
+                }
+            }
+            .rating-div{
+                i{
+                    background: linear-gradient(117deg, gold, #efdd82);
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 12px;
+                }
+            }
+        }
+        .card-footer{
+            border: 0;
+            background-color: transparent;
+            .buy {
+                position: relative;
+                overflow: hidden;
+                height: 2rem;
+                padding: 0 10px;
+                border-radius: 5px;
+                background: linear-gradient(82.3deg, rgb(93, 163, 233) 10.8%, rgb(73, 62, 223) 94.3%);
+                background-clip: text;
+                color: transparent;
+                border: 0;
+                background-size: 400%;
+                cursor: pointer;
+                font-weight: bold;
+                text-transform: capitalize;
+              }.buy:hover{
+                color: white;
+              }
+              .buy:hover::before {
+                transform: scaleX(1);
+              }
+              .buy {
+                position: relative;
+                z-index: 1;
+              }
+              .buy::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transform: scaleX(0);
+                transform-origin: 0 50%;
+                width: 100%;
+                height: inherit;
+                border-radius: inherit;
+                background: linear-gradient(82.3deg, rgb(93, 163, 233) 10.8%, rgb(73, 62, 223) 94.3%);
+                transition: all 0.3s;
+              }
+              
+        }
+    } 
+    .card:hover{
+        .img-div .offer{
+            transform: translateY(-5%);
+            transition: 0.4s;
+        }
+    }  
+}
+/*==================================================================
+                        section-6 recomeneded products END
 ==================================================================*/
