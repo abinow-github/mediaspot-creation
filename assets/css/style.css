@@ -95,6 +95,7 @@ header .navbar-2{
     .nav-item{
         border-radius: 5px 5px 0 0 ;
         transition: background 0.5s;
+        position: relative;
     }
     .nav-item .nav-link{
         color: white;
@@ -104,19 +105,41 @@ header .navbar-2{
         position: absolute;
         bottom: -10px;
         transform: translateY(100%);
-        width: 95%;
+        width: fit-content;
         left: 0;
         right: 0;
         margin: auto;
-        height: 50vh;
+        height: 52vh;
         background-color: white;
         transition: 0.5s;
-        padding: 10px;
+        padding: 10px 2rem;
         opacity: 0;
+        z-index: -1;
+        .primary-ul-div{
+          height: 100%;
+          overflow-y: scroll;
+        }
+        .main-menu-ul{
+          padding-left: 0;
+        }
         .img-div,.primary-ul-div,.secondary-ul-div{
             width: 300px;
         }
     }
+    .nav-item .nav-2-dropdown-menu-div.automotive{
+      transform: translate(-100%,100%);
+    }
+    .nav-item .nav-2-dropdown-menu-div .primary-ul-div::-webkit-scrollbar {/* .......nav 2 dropdown menu div's scrollbar */
+      border: 1px solid transparent;
+      width: 10px;}
+    .nav-item .nav-2-dropdown-menu-div .primary-ul-div::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: transparent;}
+    .nav-item .nav-2-dropdown-menu-div .primary-ul-div::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    width: 2px;
+    background: grey;}/* .......nav 2 dropdown menu div's scrollbar END */
+    
     .nav-item:hover{
         background-color: white;
         color: white;
@@ -338,25 +361,44 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
 ==================================================================*/
 .sctn-3.personalized{
     .d-grid{
-        grid-template-areas: 'item1 item1 item2 item2 item3 item3'
-                             'item1 item1 item2 item2 item3 item3'
-                              'item4 item4 item4 item5 item5 item5'
-                              'item4 item4 item4 item5 item5 item5'
-                              'item6 item6 item7 item7 item8 item8'
-                              'item6 item6 item7 item7 item8 item8';
+        grid-template-columns: repeat(3, 1fr);
                    gap: 10px;
     }
     .d-grid .item{
-        padding: 120px 30px;
+        padding:  30px;
         border-radius: 10px;
         overflow: hidden;
         border: 0;
         background: linear-gradient(178deg, #004d65, #1da0c1);
+        align-items: flex-end;
         .card-title{
+          height: 200px;
+          display: flex;
+          align-items: center;
+          padding-left: 100px;
+          width: 80%;
             font-weight: bolder;
             text-transform: uppercase;
             color: white;
             z-index: 5;
+            position: relative;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2.2px);
+            -webkit-backdrop-filter: blur(2.2px);
+            font-size: 1.5rem;
+            .pos-abs-prd-img{
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              width: 150px;
+              transform: translateX(-50%);
+              height: 90%;
+              object-fit: contain;
+            }
         }
         .card-img{
             height: 150px;
@@ -389,24 +431,22 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
             left: 0;
         }
     }
+    .d-grid .item::before{
+      content: '';
+      position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0000006e;
+    backdrop-filter: blur(4px);
+    }
     .d-grid .item:nth-child(1){
-        grid-area: item1;
-        .shape{
-            position: absolute;
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 14px 0 rgb(0 0 0 / 37%);
-            backdrop-filter: blur(0.5px);
-            -webkit-backdrop-filter: blur(0.5px);
-            left: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-            width: 100%;
-            height: 50%;
-            background: url(../img/personalized/mug.jpg);
-            background-size: cover;
-            background-position: center;
-            clip-path: polygon(0 42%, 0 0, 100% 29%, 100% 100%, 0% 100%);
+      background: url(../img/personalized/mug.jpg);
+      background-size: cover;
+      background-position: center;
+        .card-title{
+          background: linear-gradient(45deg, #0c5f79, #082e37);
         }
         .pattern{
             --s: 80px;
@@ -422,17 +462,12 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
         }
     }
     .d-grid .item:nth-child(2){
-        grid-area: item2;
-        .shape{
-            width: 50%;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background: url(../img/personalized/funplate.jpg);
-            background-size: cover;
-            clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
-            background-position: bottom;  
-        }
+      background: url(../img/personalized/funplate.jpg);
+      background-size: cover;
+      background-position: center;
+      .card-title{
+        background: linear-gradient(45deg, #0c793d, #08371c);
+      }
         .pattern{
             --s: 140px;
     --_g: #0000 52%, #ffffff24 /* first color */ 54% 57%, #0000 59%;
@@ -443,16 +478,12 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
         }
     }
     .d-grid .item:nth-child(3){
-        grid-area: item3;
-        .shape{
-            width: 50%;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background: url(../img/personalized/test\ tube\ planter.jpg);
-            background-size: cover;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-        }
+      background: url(../img/personalized/test\ tube\ planter.jpg);
+      background-size: cover;
+      background-position: center;
+      .card-title{
+        background: linear-gradient(45deg, #6c790c, #353708);
+      }
         .pattern{
             background: linear-gradient(135deg, #70809000 21px, #d9ecff14 22px, #d9ecff1c 24px, transparent 24px, transparent 67px, #d9ecff21 67px, #d9ecff1a 69px, transparent 69px), linear-gradient(225deg, #70809000 21px, #d9ecff17 22px, #d9ecff12 24px, transparent 24px, transparent 67px, #d9ecff21 67px, #d9ecff17 69px, transparent 69px) 0 64px;
             background-color: #70809000;
@@ -460,82 +491,73 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
         }
     }
     .d-grid .item:nth-child(4){
-        grid-area: item4;
-        .shape{
-            width: 50%;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background: url(../img/personalized/led\ photo\ frame.jpg);
-            background-size: cover;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-        }
+      background: url(../img/personalized/led\ photo\ frame.jpg);
+      background-size: cover;
+      background-position: center;
+      .card-title{
+        background: linear-gradient(45deg, #792f0c, #371408);
+      }
     }
     .d-grid .item:nth-child(5){
-        grid-area: item5;
-        .shape{
-            width: 50%;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background: url(../img/personalized/keychain.jpg);
-            background-size: cover;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
-        }
+      background: url(../img/personalized/keychain.jpg);
+      background-size: cover;
+      background-position: center;
+      .card-title{
+        background: linear-gradient(45deg, #790c0c, #370808);
+      }
     }
     .d-grid .item:nth-child(6){
-        grid-area: item6;
-        .shape{
-            width: 50%;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background: url(../img/personalized/photoframe.jpg);
-            background-size: cover;
-            clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
-            background-position: center;  
-        }
+      background: url(../img/personalized/photoframe.jpg);
+      background-size: cover;
+      background-position: center;
+      .card-title{
+        background: linear-gradient(45deg, #650c79, #330837);
+      }
     }
     .d-grid .item:nth-child(7){
-        grid-area: item7;
-        .shape{
-            width: 50%;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background: url(../img/personalized/uv\ photo\ frame.jpg);
-            background-size: cover;
-            clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
-            background-position: top;  
-        }
+      background: url(../img/personalized/uv\ photo\ frame.jpg);
+      background-size: cover;
+      background-position: top;
+      .card-title{
+        background: linear-gradient(45deg, #ff7800, #5a3910);
+      }
     }
     .d-grid .item:nth-child(8){
-        grid-area: item8;
-        .shape{
-            width: 100%;
-            height: 50%;
-            bottom: 0;
-            left: 0;
-            background: url(../img/personalized/caricature.jpg);
-            background-size: cover;
-            clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 100%); 
-        }
+      background: url(../img/personalized/caricature.jpg);
+      background-size: cover;
+      background-position: top;
+      .card-title{
+        background: linear-gradient(45deg, #7b746e, #242429);
+      }
     }
 }
-@media screen and (max-width:770px) {
-    .sctn-3.personalized{
-        .d-grid{
-            grid-template-areas: 'item1 item1 item2 item2'
-                                 'item1 item1 item2 item2'
-                                 'item3 item3 item4 item4'
-                                 'item3 item3 item4 item4'
-                                 'item5 item5 item6 item6'
-                                 'item5 item5 item6 item6'
-                                 'item7 item7 item8 item8'
-                                 'item7 item7 item8 item8';
-                       gap: 10px;
-        }
+@media screen and (max-width:1000px) {
+  .sctn-3.personalized{
+    .d-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
     }
+    .d-grid .item{
+        padding:80px 20px 20px 20px;
+        .card-title{
+          padding-left: 0;
+          text-align: center;
+          justify-content: center;
+          padding-top: 40px;
+          width: 100%;
+          font-size: 1rem;
+            .pos-abs-prd-img{
+              right: 0;
+              bottom: auto;
+              margin: auto;
+              height: 150px;
+              transform: translateY(-50%);
+              width: 90%;
+            }
+        }
+        
+    }
+}
 }
 /*==================================================================
                         section-3 personalized gifts END
@@ -781,6 +803,9 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
             height: 200px;
             overflow: hidden;
             position: relative;
+            img{
+              transition: 1s;
+            }
             .offer{
                 position: absolute;
                 padding: 5px 10px;
@@ -872,6 +897,10 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
         }
     } 
     .card:hover{
+      .img-div img{
+        transform: scale(1.2);
+        transition: 1s;
+      }
         .img-div .offer{
             transform: translateY(-15%);
             transition: 0.4s;

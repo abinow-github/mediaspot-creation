@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mediaspot creation</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- font -->
+    <link rel="stylesheet" href="assets/fonts/icomoon/style.css">
+
+    <!-- bootsrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+
+    <!-- jquery slick -->
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css'>
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css'>
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .nav-2-dropdown-menu-div li {
+        border-bottom: 1px solid rgb(182 173 173 / 42%);
+    }
+    .nav-2-dropdown-menu-div li a{
+      padding: 10px 0;
+    }
+    .dropdown-menu li {
+      position: relative;
+    }
+    .nav-2-dropdown-menu-div li a{
+      transition: 0.3s;
+    }
+    .nav-2-dropdown-menu-div li:hover > a{
+      padding-left: 22px;
+      transition: 0.3s;
+    }
+    .navbar-nav li:hover .dropdown-menu {
+      display: block;
+    } 
+     .submenu-ul {
+      display: none ;
+      position: absolute;
+      width: 300px;
+      height: 100%;
+      border: 0 !important;
+      left: 0;
+      top: 0;
+      transform: translateX(100%);
+      overflow-y: scroll;
+      padding-left: 10px !important;
+    }
+
+    .nav-item .submenu-left {
+      right: 100%;
+      left: auto;
+    }
+
+    .dropdown-menu > li:hover {
+      background-color: #f1f1f1;
+    }
+
+    
+    .main-menu-li:hover > .submenu-ul{
+      display: block !important;
+    }
+</style>
+<body>
+    <header>
+    <!-- 1st navbar -->
+    <div class="main-navbar shadow-sm w-100">
+        <div class="top-navbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block">
+                        <h5 class="brand-name"><img src="assets/img/logo/mediaspot-creation-logo.png" style="height: 50px;" alt=""></h5>
+                    </div>
+                    <div class="col-md-5 my-auto">
+                        <form role="search">
+                            <div class="input-group">
+                                <input type="search" placeholder="Search your product" class="form-control border-0" />
+                                <button class="btn bg-white" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5 my-auto">
+                        <ul class="nav justify-content-end">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-user"></i>  
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a></li>
+
+                                <li><a class="dropdown-item" href="#"><i class="fa fa-list"></i> My Orders</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa fa-heart"></i> My Wishlist</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2nd navbar -->
+    <nav class="navbar navbar-expand-lg navbar-2 pb-0">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav w-100 justify-content-evenly mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><!-- nav item -->
+                        <a class="nav-link" href="personalized-gifts">PERSONALIZED GIFTS</a>
+                        <div class="nav-2-dropdown-menu-div">
+                            <div class="primary-ul-div">
+                                <ul class="main-menu-ul">
+                                    
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li"> By Occasion  <i class="fa-solid fa-angles-right"></i></a>
+                                      <ul class="submenu-ul dropdown-menu" style="display: none;">
+                                        <li><a class="dropdown-item" href="ipl-special">IPL Special</a></li>
+                                        <li><a class="dropdown-item" href="promotional-election-items">Promotional Election Items</a></li>
+                                        <li><a class="dropdown-item" href="wedding-gift">Wedding Gift</a></li>
+                                        <li><a class="dropdown-item" href="anniversary-gift">Anniversary Gifts</a></li>
+                                        <li><a class="dropdown-item" href="data_science.html">Birthday Gifts</a></li>
+                                        <li><a class="dropdown-item" href="data_analytics.html">Valentine's Day</a></li>
+                                        <li><a class="dropdown-item" href="software_testing.html">Special Gifts</a></li>
+                                        <li><a class="dropdown-item" href="aws.html">World Cup Collection</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li"> By Product  <i class="fa-solid fa-angles-right"></i></a>
+                                      <ul class="submenu-ul dropdown-menu" style="display: none;">
+                                        <li><a class="dropdown-item" href="photoshop.html">LED Photo Frame</a></li>
+                                        <li><a class="dropdown-item" href="illustrator.html">Mini 'Me Caricature</a></li>
+                                        <li><a class="dropdown-item" href="coreldraw.html">Acrylic UV Photo Frame  </a></li>
+                                        <li><a class="dropdown-item" href="animation.html">Wooden UV Photo Frame</a></li>
+                                        <li><a class="dropdown-item" href="graphic_design.html">Photo Frame</a></li>
+                                        <li><a class="dropdown-item" href="video_editing.html">Printed Mug</a></li>
+                                        <li><a class="dropdown-item" href="ui_ux.html">Personalized Keychains</a></li>
+                                        <li><a class="dropdown-item" href="ui_ux.html">Photo Keychains</a></li>
+                                        <li><a class="dropdown-item" href="ui_ux.html">Wooden Test Tube Planter</a></li>
+                                        <li><a class="dropdown-item" href="ui_ux.html">Fun Plates</a></li>
+                                        <li><a class="dropdown-item" href="ui_ux.html">Clock</a></li>
+                                        <li><a class="dropdown-item" href="ui_ux.html">Cartoon Keychains</a></li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                            </div>
+                            <div class="secondary-ul-div"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><!-- nav item -->
+                        <a class="nav-link" href="awards-&-mementos">AWARDS & MEMENTOS</a>
+                        <div class="nav-2-dropdown-menu-div">
+                            <div class="primary-ul-div">
+                                <ul class="main-menu-ul">
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Premium Mementos</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Appreciation Mementos</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Sports Mementos</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Branded Mementos</a>
+                                    </li>
+                                  </ul>
+                            </div>
+                            <div class="secondary-ul-div"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><!-- nav item -->
+                        <a class="nav-link" href="brand-merchandise">BRAND MERCHANDISE</a>
+                        <div class="nav-2-dropdown-menu-div">
+                            <div class="primary-ul-div">
+                                <ul class="main-menu-ul">
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Bizcard</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Corporate Gifts</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Name Badge</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Keychains</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Branded Mug</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Clock &amp; Calendar</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Stickers</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Diary &amp; Notepad</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Water Bottle</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Pen</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Mementos</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Pen Holder &amp; Card Holder</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                        <a class="dropdown-item submenu-li">Product Display Stand</a>
+                                    </li>
+                                  </ul>
+                            </div>
+                            <div class="secondary-ul-div"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><!-- nav item -->
+                        <a class="nav-link" href="home-decors">HOME DECORS</a>
+                        <div class="nav-2-dropdown-menu-div">
+                            <div class="primary-ul-div">
+                                <ul class="main-menu-ul">
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">House Name Boards</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Wall Decors</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Wall Clocks</a>
+                                    </li>
+                                  </ul>
+                            </div>
+                            <div class="secondary-ul-div"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><!-- nav item -->
+                        <a class="nav-link" href="automotive">AUTOMOTIVE</a>
+                        <div class="nav-2-dropdown-menu-div automotive">
+                            <div class="primary-ul-div">
+                                <ul class="main-menu-ul">
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Pro Disc For Bikes</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Number Plate Frame <i class="fa-solid fa-angles-right"></i></a>
+                                      <ul class="submenu-ul dropdown-menu" style="display: none;">
+                                        <li><a class="dropdown-item" href="ipl-special">Acrylic Number Plate Frame</a></li>
+                                        <li><a class="dropdown-item" href="promotional-election-items">Bike Number Plate Gel Frame</a></li>
+                                        <li><a class="dropdown-item" href="wedding-gift">Car Number Plate Gel Frame</a></li>
+                                      </ul>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Mirror Hanging</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Bike Keychain</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">car Keychain</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Bike Stickers</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">car Stickers</a>
+                                    </li>
+                                    <li class="main-menu-li">
+                                      <a class="dropdown-item submenu-li">Helmet Stickers</a>
+                                    </li>
+                                  </ul>
+                            </div>
+                            <div class="secondary-ul-div"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+
+
+
+<!--==================================================================
+                        product details
+==================================================================-->
+<section class="prdct-dtls py-5">
+  <div class="container">
+      <div class="row">
+
+          <div class="col-md-6 image-col"><!-- image col -->
+            <div class="product-image">
+                 <a href="" class="image"></a>
+               </div>
+               <div class="row product-thumbnails">
+                 <img src="info/prdct-1.webp" alt="" class="img-thumbnail col-md-3" />
+                  <img src="info/prdct-2.webp" alt="" class="img-thumbnail col-md-3" />
+                  <img src="info/prdct-3.webp" alt="" class="img-thumbnail col-md-3" />
+                  <img src="info/prdct-4.webp" alt="" class="img-thumbnail col-md-3" />
+                  <img src="info/prdct-5.webp" alt="" class="img-thumbnail col-md-3" />
+               </div>
+          </div><!-- image col END -->
+
+          <div class="col-md-6 details-col"><!-- product details -->
+            <div class="row">
+              <h4 class="title">Custom Printed Mug</h4>
+            </div>
+            <div class="row">
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis rem, expedita, veritatis quibusdam harum nam quidem neque eos sapiente tempora repellat vero iste tenetur itaque sequi, consequatur? Illo, officiis, quidem!</p>
+            </div>
+            <div class="row price-row">
+               <h2 class="current-price">$2000</h2>
+            </div>
+          </div><!-- product details END -->
+
+      </div>
+  </div>
+</section>
+<!--==================================================================
+                      product details END
+==================================================================-->
+
+
+
+<!--==================================================================
+                        footer
+==================================================================-->
+<footer class="footer-16371">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-9 text-center">
+          <ul class="list-unstyled nav-links mb-5">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <div class="social mb-4">
+            <h3>Stay in touch</h3>
+            <ul class="list-unstyled">
+              <li class="in"><a href="#"><span class="icon-instagram"></span></a></li>
+              <li class="fb"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="tw"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="pin"><a href="#"><span class="icon-pinterest"></span></a></li>
+              <li class="dr"><a href="#"><span class="icon-dribbble"></span></a></li>
+            </ul>
+          </div>
+
+          <div class="copyright">
+            <p class="mb-0"><small>&copy;  All Rights Reserved.</small></p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- bootsrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+    <script  src="assets/js/product.js"></script>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

@@ -1,2 +1,18 @@
 refference : 
        https://orbiz.in/
+
+
+shopping card guide :
+      https://phppot.com/php/simple-php-shopping-cart/
+
+
+product card details template :
+      https://codepen.io/ato90/pen/qmZyXV
+
+
+laravel comand for create laravel-project :
+      composer create-project laravel/laravel –-prefer-dist
+
+
+run laravel project on localhost :
+      php artisan serve
