@@ -16,7 +16,7 @@ html::-webkit-scrollbar { /* right side scroll bar */
         display: none !important;
     }
 }
-@media screen and (min-width:1000px) {
+@media screen and (min-width:992px) {
     .hide-lg{
         display: none !important;
     }
@@ -80,6 +80,17 @@ header{
             padding: 8px 10px;
         }
     }
+}
+@media screen and (max-width:992px) {
+  header .main-navbar .button-options-div{/* navbar-toggle,widhlist and other options division  */
+    display: flex;
+    justify-content: space-between;
+    .navbar-toggle{
+      border: 0;
+      background: transparent;
+      font-size: 20px;
+    }
+  }
 }
 /*==================================================================
                         navbar 1 END
@@ -153,6 +164,30 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
     z-index: 3;
     bottom: 0px;
     opacity: 1;
+}
+@media screen and (max-width:992px) {
+  header .navbar-2 {
+  .navbar-collapse{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    height: 100vh;
+    background-color: white;
+    padding: 10px;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .nav-item{
+    border-bottom: 1px solid #8d878773;
+  }
+  .nav-item .nav-link{
+    color: grey;
+  }
+ }
 }
 /*==================================================================
                         navbar 2 END
@@ -349,6 +384,14 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
     .row .col-md-6:nth-child(4) .card{
         background: linear-gradient(45deg, #b29b68, #e4e3dd);
     }
+}
+@media screen and (max-width:765px) {
+  .sctn-2.occasions{
+    .card{
+      max-width: 380px;
+      margin: auto;
+    }
+  }
 }
 /*==================================================================
                         section-2 occasions END
