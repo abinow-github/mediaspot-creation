@@ -16,3 +16,7 @@ laravel comand for create laravel-project :
 
 run laravel project on localhost :
       php artisan serve
+
+banner slider :
+     https://www.w3schools.com/w3css/w3css_slideshow.asp
+     https://www.jqueryscript.net/demo/automatic-fullscreen-carousel/
