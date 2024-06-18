@@ -220,6 +220,9 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
     color: grey;
     width: fit-content;
   }
+  .nav-item.white-space-sm{
+    height: 300px;
+  }
  }
 }
 /*==================================================================

@@ -62,6 +62,14 @@
         transform: translateX(100%);
       }
     }
+    @media screen and (max-width:992px) {
+      .nav-2-dropdown-menu-div ul li:nth-last-child(1) {
+        border-bottom: 0;
+    }
+    .nav-2-dropdown-menu-div ul{
+      overflow-y: auto;
+    }
+    }
 
     .nav-item .submenu-left {
       right: 100%;
@@ -146,36 +154,36 @@
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
                                     
-                                    <li class="main-menu-li">
-                                      <a class="dropdown-item submenu-li"> By Occasion  <i class="fa-solid fa-angles-right right-arrow"></i></a>
-                                      <ul class="submenu-ul dropdown-menu" style="display: none;">
-                                        <li><a class="dropdown-item" href="ipl-special">IPL Special</a></li>
-                                        <li><a class="dropdown-item" href="promotional-election-items">Promotional Election Items</a></li>
-                                        <li><a class="dropdown-item" href="wedding-gift">Wedding Gift</a></li>
-                                        <li><a class="dropdown-item" href="anniversary-gift">Anniversary Gifts</a></li>
-                                        <li><a class="dropdown-item" href="data_science.html">Birthday Gifts</a></li>
-                                        <li><a class="dropdown-item" href="data_analytics.html">Valentine's Day</a></li>
-                                        <li><a class="dropdown-item" href="software_testing.html">Special Gifts</a></li>
-                                        <li><a class="dropdown-item" href="aws.html">World Cup Collection</a></li>
-                                      </ul>
-                                    </li>
-                                    <li class="main-menu-li">
-                                        <a class="dropdown-item submenu-li"> By Product  <i class="fa-solid fa-angles-right"></i></a>
-                                      <ul class="submenu-ul dropdown-menu" style="display: none;">
-                                        <li><a class="dropdown-item" href="photoshop.html">LED Photo Frame</a></li>
-                                        <li><a class="dropdown-item" href="illustrator.html">Mini 'Me Caricature</a></li>
-                                        <li><a class="dropdown-item" href="coreldraw.html">Acrylic UV Photo Frame  </a></li>
-                                        <li><a class="dropdown-item" href="animation.html">Wooden UV Photo Frame</a></li>
-                                        <li><a class="dropdown-item" href="graphic_design.html">Photo Frame</a></li>
-                                        <li><a class="dropdown-item" href="video_editing.html">Printed Mug</a></li>
-                                        <li><a class="dropdown-item" href="ui_ux.html">Personalized Keychains</a></li>
-                                        <li><a class="dropdown-item" href="ui_ux.html">Photo Keychains</a></li>
-                                        <li><a class="dropdown-item" href="ui_ux.html">Wooden Test Tube Planter</a></li>
-                                        <li><a class="dropdown-item" href="ui_ux.html">Fun Plates</a></li>
-                                        <li><a class="dropdown-item" href="ui_ux.html">Clock</a></li>
-                                        <li><a class="dropdown-item" href="ui_ux.html">Cartoon Keychains</a></li>
-                                      </ul>
-                                    </li>
+                                  <li class="main-menu-li">
+                                    <a class="dropdown-item submenu-li"> By Occasion <i class="fa-solid fa-angles-right right-arrow"></i></a>
+                                    <ul class="submenu-ul dropdown-menu" style="display: none;">
+                                      <li><a class="dropdown-item" href="ipl-special">IPL Special</a></li>
+                                      <li><a class="dropdown-item" href="promotional-election-items">Promotional Election Items</a></li>
+                                      <li><a class="dropdown-item" href="wedding-gift">Wedding Gift</a></li>
+                                      <li><a class="dropdown-item" href="anniversary-gifts">Anniversary Gifts</a></li>
+                                      <li><a class="dropdown-item" href="birthday-gifts">Birthday Gifts</a></li>
+                                      <li><a class="dropdown-item" href="valentines-day">Valentine's Day</a></li>
+                                      <li><a class="dropdown-item" href="special-gifts">Special Gifts</a></li>
+                                      <li><a class="dropdown-item" href="world-cup-collection">World Cup Collection</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="main-menu-li">
+                                    <a class="dropdown-item submenu-li"> By Product <i class="fa-solid fa-angles-right"></i></a>
+                                    <ul class="submenu-ul dropdown-menu" style="display: none;">
+                                      <li><a class="dropdown-item" href="led-photo-frame">LED Photo Frame</a></li>
+                                      <li><a class="dropdown-item" href="mini-me-caricature">Mini 'Me Caricature</a></li>
+                                      <li><a class="dropdown-item" href="acrylic-uv-photo-frame">Acrylic UV Photo Frame</a></li>
+                                      <li><a class="dropdown-item" href="wooden-uv-photo-frame">Wooden UV Photo Frame</a></li>
+                                      <li><a class="dropdown-item" href="photo-frame">Photo Frame</a></li>
+                                      <li><a class="dropdown-item" href="printed-mug">Printed Mug</a></li>
+                                      <li><a class="dropdown-item" href="personalized-keychains">Personalized Keychains</a></li>
+                                      <li><a class="dropdown-item" href="photo-keychains">Photo Keychains</a></li>
+                                      <li><a class="dropdown-item" href="wooden-test-tube-planter">Wooden Test Tube Planter</a></li>
+                                      <li><a class="dropdown-item" href="fun-plates">Fun Plates</a></li>
+                                      <li><a class="dropdown-item" href="clock">Clock</a></li>
+                                      <li><a class="dropdown-item" href="cartoon-keychains">Cartoon Keychains</a></li>
+                                    </ul>
+                                  </li>                                  
                                   </ul>
                             </div>
                             <div class="secondary-ul-div"></div>
@@ -310,6 +318,7 @@
                             <div class="secondary-ul-div"></div>
                         </div>
                     </li>
+                    <li class="nav-item hide-lg white-space-sm"></li>
                 </ul>
             </div>
         </div>
@@ -518,7 +527,7 @@
                         section-5 another image banner 
 ==================================================================-->
 <section class="sctn-5 img-bnr">
-    <div class="container-fluid"><img src="info/1880x780.webp" class="w-100" alt="" srcset=""></div>
+    <div class="container-fluid p-0"><img src="info/06.jpg" class="w-100" alt="" srcset=""></div>
 </section>
 <!--==================================================================
                         section-5 another image banner END
