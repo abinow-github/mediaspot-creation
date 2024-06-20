@@ -177,7 +177,7 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
   }
 }
 @media screen and (max-width:992px) {
-  header .navbar-2 {
+ header .navbar-2 {
   .navbar-collapse{
     position: fixed;
     width: 100%;
@@ -191,6 +191,9 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
     align-content: flex-start;
     flex-wrap: wrap;
     overflow-y: scroll;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 1s;
   }
   
   .nav-item{
@@ -222,6 +225,13 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
   }
   .nav-item.white-space-sm{
     height: 300px;
+    border: 0;
+  }
+ }
+ header .navbar-2.show{
+  .navbar-collapse{
+    transform: translateX(0);
+    opacity: 1;
   }
  }
 }
@@ -235,108 +245,197 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
 /*==================================================================
                         first carousel 
 ==================================================================*/
-.slider{
-  position: relative;
-  width: 90vw;
-  overflow: hidden;
-  margin: auto;
-  .slideshow {
+
+@media screen and (min-width:765px) {
+  .slider{
     position: relative;
-    overflow: hidden;
     width: 90vw;
-    height: 100vh;
-    .img{
-      border-radius: 20px;
-    }
-}
-
-.holder {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 10000vw;
-    height: 100vh;
-    transition: left 1s;
-}
-
-.holder div {
-    float: left;
-    width: 90vw;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px 30px;
-}
-
-/* .slide-1 {
-    background-image: url('../../info/1.jpg');
-}
-
-.slide-2 {
-    background-image: url('../../info/1.jpg');
-}
-
-.slide-3 {
-    background-image: url('../../info/1.jpg');
-}
-
-.slide-4 {
-    background-image: url('../../info/1.jpg');
-}
-
-.slide-5 {
-    background-image: url('../../info/1.jpg');
-} */
-
-.steps {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    width: 100%;
     overflow: hidden;
-    text-align: center;
-    display: none;
-}
-
-a {
-    color: white;
-    padding: 20px 30px;
-    position: absolute;
-    bottom: 0;
-    text-decoration: none;
-    z-index: 1;
-}
-
-.prev {
-    left: 0;
-    display: none;
-}
-
-.next {
-    right: 0;
-    background-color: white;
-    border-radius: 15px 0 0 0 ;
-    color: var(--primary-clr);
-    display: flex;
-    font-size: 30px;
-    align-items: center;
-    width: 150px;
-    cursor: pointer;
-    height: 80px;
+    margin: auto;
+    .slideshow {
+      position: relative;
+      overflow: hidden;
+      width: 90vw;
+      height: 100vh;
+      .img{
+        border-radius: 20px;
+      }
+  }
+  
+  .holder {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 10000vw;
+      height: 100vh;
+      transition: left 1s;
+  }
+  
+  .holder div {
+      float: left;
+      width: 90vw;
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px 30px;
+  }
+  
+  /* .slide-1 {
+      background-image: url('../../info/1.jpg');
+  }
+  
+  .slide-2 {
+      background-image: url('../../info/1.jpg');
+  }
+  
+  .slide-3 {
+      background-image: url('../../info/1.jpg');
+  }
+  
+  .slide-4 {
+      background-image: url('../../info/1.jpg');
+  }
+  
+  .slide-5 {
+      background-image: url('../../info/1.jpg');
+  } */
+  
+  .steps {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      display: none;
+  }
+  
+  a {
+      color: white;
+      padding: 20px 30px;
+      position: absolute;
+      bottom: 0;
+      text-decoration: none;
+      z-index: 1;
+  }
+  
+  .prev {
+      left: 0;
+      display: none;
+  }
+  
+  .next {
+      right: 0;
+      background-color: white;
+      border-radius: 15px 0 0 0 ;
+      color: var(--primary-clr);
+      display: flex;
+      font-size: 30px;
+      align-items: center;
+      width: 150px;
+      cursor: pointer;
+      height: 80px;
+      span{
+        width: 40px;
+        height: 4px;
+        transition: 0.5s;
+        border-radius: 2px;
+        background-color: var(--primary-clr);
+      }
+  }
+  .next:hover{
     span{
-      width: 40px;
-      height: 4px;
-      transition: 0.5s;
-      border-radius: 2px;
-      background-color: var(--primary-clr);
+      width: 60px;
     }
-}
-.next:hover{
-  span{
-    width: 60px;
+  }
   }
 }
+@media screen and (max-width:765px) {
+  .slider{
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    margin: auto;
+    .slideshow {
+      position: relative;
+      overflow: hidden;
+      width: 100vw;
+      height: fit-content;
+      .img{
+        border-radius: 20px;
+      }
+  }
+  
+  .holder {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 10000vw;
+      height: fit-content;
+      transition: left 1s;
+  }
+  
+  .holder div {
+      float: left;
+      width: 100vw;
+      height: fit-content;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px 30px;
+      padding-bottom: 0;
+  }
+  
+  .steps {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      display: none;
+  }
+  
+  a {
+      color: white;
+      padding: 20px 30px;
+      position: absolute;
+      bottom: 0;
+      text-decoration: none;
+      z-index: 1;
+  }
+  
+  .prev {
+      left: 0;
+      display: none;
+  }
+  
+  .next {
+      right: 0;
+      background-color: white;
+      border-radius: 15px 0 0 0 ;
+      color: var(--primary-clr);
+      display: flex;
+      font-size: 30px;
+      align-items: center;
+      width: 150px;
+      cursor: pointer;
+      height: 70px;
+      span{
+        width: 40px;
+        height: 4px;
+        transition: 0.5s;
+        border-radius: 2px;
+        background-color: var(--primary-clr);
+      }
+  }
+  .next:hover{
+    span{
+      width: 60px;
+    }
+  }
+  }
 }
 /*==================================================================
                         first carousel END
@@ -443,21 +542,11 @@ a {
                         section-3 personalized gifts
 ==================================================================*/
 .sctn-3.personalized{
-    .d-grid{
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(9, 110px);
-                   gap: 10px;
-    }
     .d-grid .title-card{
-      grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row-start: 1;
-      grid-row-end: 4;
       align-items: center;
       justify-content: center;
       text-align: center;
       border-radius: 10px;
-      margin: 20px;
       border: 2px solid var(--primary-clr);
       .card-title{
         font-size: 1.5rem;
@@ -518,6 +607,72 @@ a {
             left: 0;
         }
     }
+    .d-grid .item::before{
+      content: '';
+      position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0000006e;
+    backdrop-filter: blur(1
+    px);
+    }
+    .d-grid .item:nth-child(1){
+      background: url(../img/personalized/mug.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .d-grid .item:nth-child(2){
+      background: url(../img/personalized/funplate.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .d-grid .item:nth-child(3){
+      background: url(../img/personalized/test\ tube\ planter.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .d-grid .item:nth-child(4){
+      background: url(../img/personalized/led\ photo\ frame.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .d-grid .item:nth-child(5){
+      background: url(../img/personalized/keychain.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .d-grid .item:nth-child(6){
+      background: url(../img/personalized/photoframe.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .d-grid .item:nth-child(7){
+      background: url(../img/personalized/uv\ photo\ frame.jpg);
+      background-size: cover;
+      background-position: top;
+    }
+    .d-grid .item:nth-child(8){
+      background: url(../img/personalized/caricature.jpg);
+      background-size: cover;
+      background-position: top;
+    }
+}
+@media screen and (min-width:1000px) {
+  .sctn-3.personalized{
+    .d-grid{
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(9, 110px);
+                 gap: 10px;
+  }
+  .d-grid .title-card{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin: 20px;
+   }
     .d-grid .item:nth-child(1){
       grid-column-start: 3;
       grid-column-end: 5;
@@ -566,113 +721,22 @@ a {
       grid-row-start: 7;
       grid-row-end: 10;
     }
-    .d-grid .item::before{
-      content: '';
-      position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #0000006e;
-    backdrop-filter: blur(1
-    px);
-    }
-    .d-grid .item:nth-child(1){
-      background: url(../img/personalized/mug.jpg);
-      background-size: cover;
-      background-position: center;
-        /* .card-title{
-          background: linear-gradient(45deg, #0c5f79, #082e37);
-        } */
-        .pattern{
-            --s: 80px;
-    --c: #c1e9cc00;
-    --_s: calc(2* var(--s)) calc(2* var(--s));
-    --_g: 35.36% 35.36% at;
-    --_c: #0000 66%, #ffffff24 68% 70%, #0000 72%;
-    background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s) / var(--_s),
-     radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s) / var(--_s),
-      radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0 / var(--_s), radial-gradient(var(--_g) 0 75%,
-       var(--_c)) 0 0 / var(--_s), repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0 / var(--_s),
-        radial-gradient(var(--_c)) 0 calc(var(--s) / 2) / var(--s) var(--s) var(--c);
-        }
-    }
-    .d-grid .item:nth-child(2){
-      background: url(../img/personalized/funplate.jpg);
-      background-size: cover;
-      background-position: center;
-      /* .card-title{
-        background: linear-gradient(45deg, #0c793d, #08371c);
-      } */
-        .pattern{
-            --s: 140px;
-    --_g: #0000 52%, #ffffff24 /* first color */ 54% 57%, #0000 59%;
-    background: radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0 calc(var(--s) / 2),
-     radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s) / 2) 0,
-      radial-gradient(farthest-side at 133.33% 50%, var(--_g)), radial-gradient(farthest-side at 50% -33.33%, var(--_g)), #67917a00;
-    background-size: calc(var(--s) / 4.667) var(--s), var(--s) calc(var(--s) / 4.667);
-        }
-    }
-    .d-grid .item:nth-child(3){
-      background: url(../img/personalized/test\ tube\ planter.jpg);
-      background-size: cover;
-      background-position: center;
-      /* .card-title{
-        background: linear-gradient(45deg, #6c790c, #353708);
-      } */
-        .pattern{
-            background: linear-gradient(135deg, #70809000 21px, #d9ecff14 22px, #d9ecff1c 24px, transparent 24px, transparent 67px, #d9ecff21 67px, #d9ecff1a 69px, transparent 69px), linear-gradient(225deg, #70809000 21px, #d9ecff17 22px, #d9ecff12 24px, transparent 24px, transparent 67px, #d9ecff21 67px, #d9ecff17 69px, transparent 69px) 0 64px;
-            background-color: #70809000;
-            background-size: 64px 128px;
-        }
-    }
-    .d-grid .item:nth-child(4){
-      background: url(../img/personalized/led\ photo\ frame.jpg);
-      background-size: cover;
-      background-position: center;
-      /* .card-title{
-        background: linear-gradient(45deg, #792f0c, #371408);
-      } */
-    }
-    .d-grid .item:nth-child(5){
-      background: url(../img/personalized/keychain.jpg);
-      background-size: cover;
-      background-position: center;
-      /* .card-title{
-        background: linear-gradient(45deg, #790c0c, #370808);
-      } */
-    }
-    .d-grid .item:nth-child(6){
-      background: url(../img/personalized/photoframe.jpg);
-      background-size: cover;
-      background-position: center;
-      /* .card-title{
-        background: linear-gradient(45deg, #650c79, #330837);
-      } */
-    }
-    .d-grid .item:nth-child(7){
-      background: url(../img/personalized/uv\ photo\ frame.jpg);
-      background-size: cover;
-      background-position: top;
-      /* .card-title{
-        background: linear-gradient(45deg, #ff7800, #5a3910);
-      } */
-    }
-    .d-grid .item:nth-child(8){
-      background: url(../img/personalized/caricature.jpg);
-      background-size: cover;
-      background-position: top;
-      /* .card-title{
-        background: linear-gradient(45deg, #7b746e, #242429);
-      } */
-    }
+  }
 }
 @media screen and (max-width:1000px) {
   .sctn-3.personalized{
     .d-grid{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         gap: 5px;
     }
+    .d-grid .title-card{
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      margin: 10px;
+     }
     .d-grid .item{
         padding:80px 20px 20px 20px;
         .card-title{
@@ -693,6 +757,93 @@ a {
         }
         
     }
+    .d-grid .item:nth-child(1){
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+     .d-grid .item:nth-child(2){
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    .d-grid .item:nth-child(3){
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    .d-grid .item:nth-child(4){
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .d-grid .item:nth-child(5){
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    .d-grid .item:nth-child(6){
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+    .d-grid .item:nth-child(7){
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .d-grid .item:nth-child(8){
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+}
+}
+@media screen and (max-width:765px) {
+  .sctn-3.personalized{
+    .d-grid .title-card{
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      margin: 10px;
+     }
+    .d-grid .item:nth-child(1){
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+     .d-grid .item:nth-child(2){
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    .d-grid .item:nth-child(3){
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    .d-grid .item:nth-child(4){
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .d-grid .item:nth-child(5){
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    .d-grid .item:nth-child(6){
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+    .d-grid .item:nth-child(7){
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .d-grid .item:nth-child(8){
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
 }
 }
 /*==================================================================
@@ -712,8 +863,11 @@ a {
             text-transform: capitalize;
         }
     }
+    .row .col-lg-3{
+      border: 1px solid #ccc;
+    }
     .card{
-        width: 250px;
+        width: 100%;
         border-radius: 15px;
         border: 0;
         padding: 30px 0;
@@ -737,24 +891,18 @@ a {
             }
         }
     }
-    .col-lg-3:nth-child(1) .card{
-        background: radial-gradient(#e3a1a1 10%, #ffffff 70%);
-    }
-    .col-lg-3:nth-child(2) .card{
-        background: radial-gradient(#beda81 10%, #ffffff 70%);
-    }
-    .col-lg-3:nth-child(3) .card{
-        background: radial-gradient(#e8ef68 10%, #ffffff 70%);
-    }
-    .col-lg-3:nth-child(4) .card{
-        background: radial-gradient(#a49eee 10%, #ffffff 70%);
-    }
 }
 @media screen and (max-width:765px) {
     .sctn-4.branded{
+      .row .col-lg-3{
+        padding: 0;
+      }
         .card{
             width: 100%;
             height: 100%;
+            .card-body{
+              padding: 0  10px;
+            }
         }
     }
 }
@@ -936,13 +1084,14 @@ a {
         border: 0;
         height: 100%;
         position: relative;
-        
+        cursor: pointer;
         .img-div{
             height: 200px;
             overflow: hidden;
             position: relative;
             img{
               transition: 1s;
+              object-fit: contain;
             }
             .offer{
                 position: absolute;

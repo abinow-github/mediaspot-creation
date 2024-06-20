@@ -21,7 +21,8 @@
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    
+    <!-- lord-icon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -107,7 +108,7 @@
                     </div>
                     <div class="col-md-5 my-auto button-options-div">
 
-                      <button class="navbar-toggle hide-lg" onclick="showNav(nav2)"><i class="fa-solid fa-bars"></i></button><!-- navbar toggle for small devices -->
+                      <button class="navbar-toggle hide-lg" onclick="showNav('nav2')"><i class="fa-solid fa-bars"></i></button><!-- navbar toggle for small devices -->
 
                         <ul class="nav justify-content-end">
                             
@@ -145,7 +146,7 @@
         <div class="container-fluid">
             <div class="collapse navbar-collapse">
 
-              <div class="close-btn-div hide-lg"><button class="nav-close-btn"><i class="fa-solid fa-xmark"></i></button></div>
+              <div class="close-btn-div hide-lg"><button class="nav-close-btn" onclick="hideNav('nav2')"><i class="fa-solid fa-xmark"></i></button></div>
               
                 <ul class="navbar-nav w-100 justify-content-evenly mx-auto mb-2 mb-lg-0">
                     <li class="nav-item"><!-- nav item -->
@@ -190,7 +191,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><!-- nav item -->
-                        <a class="nav-link" href="awards-&-mementos">AWARDS & MEMENTOS</a>
+                      <div class="nav-link-row d-flex"><a class="nav-link" href="awards-&-mementos">AWARDS & MEMENTOS</a><i class="fa-solid hide-lg fa-angle-right"></i></div>
                         <div class="nav-2-dropdown-menu-div">
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
@@ -212,7 +213,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><!-- nav item -->
-                        <a class="nav-link" href="brand-merchandise">BRAND MERCHANDISE</a>
+                      <div class="nav-link-row d-flex"><a class="nav-link" href="brand-merchandise">BRAND MERCHANDISE</a><i class="fa-solid hide-lg fa-angle-right"></i></div>
                         <div class="nav-2-dropdown-menu-div">
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
@@ -261,7 +262,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><!-- nav item -->
-                        <a class="nav-link" href="home-decors">HOME DECORS</a>
+                      <div class="nav-link-row d-flex"><a class="nav-link" href="home-decors">HOME DECORS</a><i class="fa-solid hide-lg fa-angle-right"></i></div>
                         <div class="nav-2-dropdown-menu-div">
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
@@ -280,7 +281,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><!-- nav item -->
-                        <a class="nav-link" href="automotive">AUTOMOTIVE</a>
+                      <div class="nav-link-row d-flex"><a class="nav-link" href="automotive">AUTOMOTIVE</a><i class="fa-solid hide-lg fa-angle-right"></i></div>
                         <div class="nav-2-dropdown-menu-div automotive">
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
@@ -332,11 +333,10 @@
 <div class="slider mb-0">
 
   <div class="slideshow">
-    <div class="holder">
+    <div class="holder" id="holder">
         <div class="slide-1"><img src="info/2.jpg" alt="img" class="img w-100"></div>
         <div class="slide-2"><img src="info/1.jpg" alt="img" class="img w-100"></div>
         <div class="slide-3"><img src="info/2.jpg" alt="img" class="img w-100"></div>
-        <div class="slide-4"><img src="info/1.jpg" alt="img" class="img w-100"></div>
     </div>
 </div>
 
@@ -345,9 +345,23 @@
 </div>
 
 <a href="#" class="prev">Prev</a>
-<a class="next"><span></span> <i class="fa-solid fa-chevron-right"></i></a>
+<a class="next"><lord-icon src="https://cdn.lordicon.com/vduvxizq.json" trigger="click" target=".next" style="width:250px;height:250px"></lord-icon></a>
 
 </div>
+<script>
+  // Check screen size and load appropriate content
+  if (window.matchMedia("(max-width: 768px)").matches) {
+      // Load content for small screens
+      fetch('bnr-slider-sm.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('holder').innerHTML = data);
+  } else {
+      // Load content for large screens
+      fetch('bnr-slider-lg.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('holder').innerHTML = data);
+  }
+</script>
 <!--==================================================================
                         slider-1 END
 ==================================================================-->
@@ -470,7 +484,7 @@
         </div>
         <div class="row">
 
-            <div class="col-md-6 col-6 col-lg-3 pb-4">
+            <div class="col-md-6 col-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <img src="assets/img/branded gift/namebadge.png" alt="" class="frame-img">
@@ -481,7 +495,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-6 col-lg-3 pb-4">
+            <div class="col-md-6 col-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <img src="assets/img/branded gift/mementom.png" alt="" class="frame-img">
@@ -492,7 +506,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-6 col-lg-3 pb-4">
+            <div class="col-md-6 col-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <img src="assets/img/branded gift/gel stcker.png" alt="" class="frame-img">
@@ -503,7 +517,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-6 col-lg-3 pb-4">
+            <div class="col-md-6 col-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <img src="assets/img/branded gift/clock.png" alt="" class="frame-img">
@@ -569,7 +583,7 @@
               </a>
                 <div class="card" onclick="window.location.href='product-details.html'"><!-- card -->
                     <div class="img-div">
-                        <img src="info/prdct-1.webp" alt="" class="w-100">
+                        <img src="info/products/acrylic-mementos/1.png" alt="" class="w-100 h-100">
                         <div class="offer">41% off</div>
                     </div>
                     <div class="card-body">
@@ -613,7 +627,7 @@
                 <div class="card" onclick="window.location.href='product-details.html'"><!-- card -->
 
                     <div class="img-div">
-                        <img src="info/prdct-2.webp" alt="" class="w-100">
+                        <img src="info/products/multi-wood-mementos/1.png" alt="" class="w-100 h-100">
                         <div class="offer">41% off</div>
                     </div>
                     <div class="card-body">
@@ -658,7 +672,7 @@
 
 
                     <div class="img-div">
-                        <img src="info/prdct-3.webp" alt="" class="w-100">
+                        <img src="info/products/acrylic-mementos/10.png" alt="" class="w-100 h-100">
                         <div class="offer">41% off</div>
                     </div>
                     <div class="card-body">
@@ -703,7 +717,7 @@
 
 
                     <div class="img-div">
-                        <img src="info/prdct-4.webp" alt="" class="w-100">
+                        <img src="info/products/multi-wood-mementos/10.png" alt="" class="w-100 h-100">
                         <div class="offer">41% off</div>
                     </div>
                     <div class="card-body">
@@ -748,7 +762,7 @@
 
 
                     <div class="img-div">
-                        <img src="info/prdct-5.webp" alt="" class="w-100">
+                        <img src="info/products/acrylic-mementos/11.png" alt="" class="w-100 h-100">
                         <div class="offer">41% off</div>
                     </div>
                     <div class="card-body">
@@ -793,7 +807,7 @@
 
 
                     <div class="img-div">
-                        <img src="info/prdct-6.webp" alt="" class="w-100">
+                        <img src="info/products/multi-wood-mementos/11.png" alt="" class="w-100 h-100">
                         <div class="offer">41% off</div>
                     </div>
                     <div class="card-body">
@@ -838,7 +852,7 @@
 
 
                     <div class="img-div">
-                        <img src="info/prdct-7.webp" alt="" class="w-100">
+                        <img src="info/products/acrylic-mementos/12.png" alt="" class="w-100 h-100">
                         <div class="offer">41% off</div>
                     </div>
                     <div class="card-body">
@@ -883,7 +897,7 @@
 
 
                     <div class="img-div">
-                        <img src="info/prdct-1.webp" alt="" class="w-100">
+                        <img src="info/products/multi-wood-mementos/12.png" alt="" class="w-100 h-100">
                         <div class="offer">41% off</div>
                     </div>
                     <div class="card-body">
@@ -899,6 +913,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </section>
@@ -951,91 +966,98 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      //whenever we load the page, always display the first slide
-var currentSlide = 0
+      // Whenever we load the page, always display the first slide
+var currentSlide = 0;
 
-//here we set how many slides we have using the .length property
-//this is useful because we can use it as our max slide value
-var totalSlides = $('.holder div').length
+// Here we set how many slides we have using the .length property
+// This is useful because we can use it as our max slide value
+var totalSlides = $('.holder div').length;
 
+// Function to determine the correct multiplier based on screen size
+var getMultiplier = function() {
+    // Check if the screen width is less than or equal to 768px (mobile view)
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        return 100;
+    }
+    // Default multiplier for larger screens
+    return 90;
+};
 
-// 1. a function that deals with taking us to the next slide
+// 1. Function that deals with taking us to the next slide
 var nextSlide = function() {
-    // increment our currentSlide value by reassigning it and increlenting 	   it by 1
-    currentSlide = currentSlide + 1
+    // Increment our currentSlide value by reassigning it and incrementing it by 1
+    currentSlide = currentSlide + 1;
 
-    //a continuacion ponemos este codigo para que nuestras slides y numeros no sigan avanzando cuando lleguen a la 4ta
-    //
+    // Ensure our slides and numbers do not keep advancing when they reach the last slide
     if (currentSlide >= totalSlides) {
-        currentSlide = 0
+        currentSlide = 0;
     }
-    // we are going to turn our currentSlide value into a negative vw unit
-    var leftPosition = (-currentSlide * 90) + 'vw'
-    // here we add the 'vw' unit into the end
 
-    // pass the vw unit into our css method below
-    //here we grab the holder and change it to the second slide
-    $('.holder').css('left', leftPosition)
+    // Use the getMultiplier function to determine the correct left position
+    var leftPosition = (-currentSlide * getMultiplier()) + 'vw';
 
-    var slideNumber = currentSlide + 1
-    // here we set the text for the steps using currentSlide and total nubmer
-    $('.steps').text(slideNumber + ' / ' + totalSlides)
-}
+    // Pass the vw unit into our css method below
+    // Here we grab the holder and change it to the next slide
+    $('.holder').css('left', leftPosition);
 
-//2. a function that deals with taking us to the previous slide
+    var slideNumber = currentSlide + 1;
+    // Here we set the text for the steps using currentSlide and total number
+    $('.steps').text(slideNumber + ' / ' + totalSlides);
+};
 
+// 2. Function that deals with taking us to the previous slide
 var previousSlide = function() {
-    //this is identical to our nextSlide function, apart from that we are decrementing the currentSlide value (taking us back rather than fowards)
-    currentSlide = currentSlide - 1
+    // This is identical to our nextSlide function, apart from that we are decrementing the currentSlide value (taking us back rather than forwards)
+    currentSlide = currentSlide - 1;
 
-    //a continuacion ponemos este codigo para que nuestras slides y numeros no sigan retrocediendo cuando lleguen al 0
-    //
+    // Ensure our slides and numbers do not keep going back when they reach the first slide
     if (currentSlide < 0) {
-        currentSlide = totalSlides - 1
+        currentSlide = totalSlides - 1;
     }
 
-    var leftPosition = (-currentSlide * 100) + 'vw'
-    $('.holder').css('left', leftPosition)
+    // Use the getMultiplier function to determine the correct left position
+    var leftPosition = (-currentSlide * getMultiplier()) + 'vw';
 
-    var slideNumber = currentSlide + 1
-    // here we set the text for the steps using currentSlide and total nubmer
-    $('.steps').text(slideNumber + ' / ' + totalSlides)
-}
+    $('.holder').css('left', leftPosition);
 
-//setInterval allows us to run a function every x amount of time
+    var slideNumber = currentSlide + 1;
+    // Here we set the text for the steps using currentSlide and total number
+    $('.steps').text(slideNumber + ' / ' + totalSlides);
+};
+
+// setInterval allows us to run a function every x amount of time
 var autoSlide = setInterval(function() {
-    // here our nextSlide function will be run
-    nextSlide()
-    // runs every 3seconds (3000ms)
-}, 3000)
+    // Here our nextSlide function will be run
+    nextSlide();
+    // Runs every 3 seconds (3000ms)
+}, 3000);
 
-//we also have setTimeout, wich is the same, but runs only once
+// We also have setTimeout, which is the same, but runs only once
 
 $('.next').on('click', function() {
-    //this is going to cancel our autoSlide interval function
-    //as the user has taken over control of the slideshow
-    clearInterval(autoSlide)
-    // here we call the nextSlide function and fo to the next slide
-    nextSlide()
-})
-
+    // This is going to cancel our autoSlide interval function
+    // As the user has taken over control of the slideshow
+    clearInterval(autoSlide);
+    // Here we call the nextSlide function and go to the next slide
+    nextSlide();
+});
 
 $('.prev').on('click', function() {
-    clearInterval(autoSlide)
-    previousSlide()
-})
+    clearInterval(autoSlide);
+    previousSlide();
+});
 
 $('body').on('keydown', function(event) {
-    var keyCode = event.keyCode
+    var keyCode = event.keyCode;
     if (keyCode == 37) {
-        clearInterval(autoSlide)
-        previousSlide()
+        clearInterval(autoSlide);
+        previousSlide();
     }
     if (keyCode == 39) {
-        clearInterval(autoSlide)
-        nextSlide()
+        clearInterval(autoSlide);
+        nextSlide();
     }
-})
+});
     </script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
