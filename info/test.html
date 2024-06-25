@@ -1,53 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<style>
+        body{
+                background-color: red;
+        }
+        .box {
+  margin: 50px auto;
+  height: 350px;
+  width: 350px;
+  position: relative;
+  background-color: aqua;
+  transition: 0.2s 0.18s;
+}
+.box:before, .box:after {
+  content: "";
+  position: absolute;
+  height: 7px;
+  width: 0%;
+  background: #fff;
+  transition: 0.2s;
+}
+.box:before {
+  top: -7px;
+  right: -7px;
+}
+.box:after {
+  bottom: -7px;
+  left: -7px;
+}
 
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/digital-business-card" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/corporate-gifts" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/name-badge" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/branding-keychains" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/branded-mug" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/wall-clocks" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/stickers" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/diaries-notepad" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/water-bottle" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/pen" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/personalized-mementos" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/wooden-pen-holder" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li>
-        <li class="menu-lv-item menu-lv-2 text-left  "><a href="/collections/product-display-stand" class="menu-lv-2__action header__menu-item list-menu__item link link--text focus-inset caption-large">
-                    <span class="text">
-                        
-                    </span></a></li></ul></li>
+.box:hover:after, .box:hover:before {
+  width: 110%;
+  transition: 0.2s 0.18s;
+}
+</style>
+<body>
+        <div class="box"></div>
+</body>
+</html>
