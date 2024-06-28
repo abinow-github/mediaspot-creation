@@ -23,14 +23,44 @@ html::-webkit-scrollbar { /* right side scroll bar */
 }
 
 /*==================================================================
+                        top bar
+==================================================================*/
+.top-bar{
+  height: 40px;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(270deg, #b9dae2, #004d65);
+  .container{
+    justify-content: space-between;
+  }
+  .msg{
+    color: white;
+  }
+  .r-div{
+    gap: 15px;
+    a{
+      text-decoration: none;
+      color: #272424;
+      text-transform: capitalize;
+    }
+  }
+}
+/*==================================================================
+                        top bar END
+==================================================================*/
+/*==================================================================
                         navbar 1
 ==================================================================*/
 header{
     .main-navbar{
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: 40px;
         left: 0;
         z-index: 100;
+        border: 1px solid #e5e5e5;
+        border-left: 0;
+        border-right: 0;
         .input-group .form-control:focus{
             box-shadow: none;
         }
@@ -39,6 +69,13 @@ header{
         background-color: #ffffff;
         padding-top: 10px;
         padding-bottom: 10px;
+        .row{
+          justify-content: space-between;
+          padding: 15px 8px;
+        }
+        .serch-box-col .input-group{/* serch box */
+          border: 1px solid #3735353d;
+        }
     }
     .main-navbar .top-navbar .brand-name{
         color: #fff;
@@ -49,7 +86,7 @@ header{
         font-weight: 500;
     }
     .main-navbar .top-navbar .nav-link.cart-link{
-      color: #484cc9;
+      color: #2596b9;
     }
     .main-navbar .top-navbar .nav-link.whishlist-link{
       color: #dd4d5a;
@@ -109,15 +146,24 @@ header{
                         navbar 2 
 ==================================================================*/
 header .navbar-2{
-    margin-top: 80px;
+    margin-top: 100px;
+    border-bottom: 1px solid #e5e5e5;
+    .navbar-nav{
+      gap: 25px;
+    }
     .nav-item{
         border-radius: 5px 5px 0 0 ;
         transition: background 0.5s;
         position: relative;
+        .fa-angle-down{
+          display: flex;
+          align-items: center;
+        }
     }
     .nav-item .nav-link{
-        color: var(--primary-clr);
-        font-weight: bold;
+        /* color: var(--primary-clr); */
+        text-transform: capitalize;
+        color: #272424;
     }
     .nav-item .nav-2-dropdown-menu-div{
         position: absolute;
@@ -158,12 +204,24 @@ header .navbar-2{
     .nav-item:hover{
         background-color: white;
         color: white;
-        .nav-link,.right-arrow,.fa-angle-right{
-            color: var(--primary-clr);
+        .nav-link,.right-arrow,.fa-angle-right,.fa-angle-down{
+            color: #272424;
         }
         .fa-angle-right{
           transform: rotate(90deg);
         }
+    }
+
+    .call-mail-div{/* call mail part */
+      gap: 15px;
+      .call-btn,.mail-btn{
+        text-decoration: none;
+        color: #272424;
+        img{
+          height: 20px;
+          padding-right: 5px;
+        }
+      }
     }
 }
 header .navbar-2 .nav-item:hover .nav-2-dropdown-menu-div,
@@ -254,113 +312,6 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
 /*==================================================================
                         first carousel 
 ==================================================================*/
-
-@media screen and (min-width:765px) {
-  .slider{
-    position: relative;
-    width: 90vw;
-    overflow: hidden;
-    margin: auto;
-    .slideshow {
-      position: relative;
-      overflow: hidden;
-      width: 90vw;
-      height: 100vh;
-      .img{
-        border-radius: 20px;
-      }
-  }
-  
-  .holder {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 10000vw;
-      height: 100vh;
-      transition: left 1s;
-  }
-  
-  .holder div {
-      float: left;
-      width: 90vw;
-      height: 100vh;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 20px 30px;
-  }
-  
-  /* .slide-1 {
-      background-image: url('../../info/1.jpg');
-  }
-  
-  .slide-2 {
-      background-image: url('../../info/1.jpg');
-  }
-  
-  .slide-3 {
-      background-image: url('../../info/1.jpg');
-  }
-  
-  .slide-4 {
-      background-image: url('../../info/1.jpg');
-  }
-  
-  .slide-5 {
-      background-image: url('../../info/1.jpg');
-  } */
-  
-  .steps {
-      position: absolute;
-      bottom: 30px;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      text-align: center;
-      display: none;
-  }
-  
-  a {
-      color: white;
-      padding: 20px 30px;
-      position: absolute;
-      bottom: 0;
-      text-decoration: none;
-      z-index: 1;
-  }
-  
-  .prev {
-      left: 0;
-      display: none;
-  }
-  
-  .next {
-      right: 0;
-      background-color: white;
-      border-radius: 15px 0 0 0 ;
-      color: var(--primary-clr);
-      display: flex;
-      font-size: 30px;
-      align-items: center;
-      width: 150px;
-      cursor: pointer;
-      height: 80px;
-      span{
-        width: 40px;
-        height: 4px;
-        transition: 0.5s;
-        border-radius: 2px;
-        background-color: var(--primary-clr);
-      }
-  }
-  .next:hover{
-    span{
-      width: 60px;
-    }
-  }
-  }
-}
-@media screen and (max-width:765px) {
   .slider{
     position: relative;
     width: 100vw;
@@ -371,9 +322,6 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
       overflow: hidden;
       width: 100vw;
       height: fit-content;
-      .img{
-        border-radius: 20px;
-      }
   }
   
   .holder {
@@ -392,8 +340,7 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      padding: 20px 30px;
-      padding-bottom: 0;
+      padding: 0;
   }
   
   .steps {
@@ -420,24 +367,32 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
       display: none;
   }
   
-  .next {
-      right: 0;
-      background-color: white;
-      border-radius: 15px 0 0 0 ;
-      color: var(--primary-clr);
-      display: flex;
-      font-size: 30px;
-      align-items: center;
-      width: 150px;
-      cursor: pointer;
-      height: 70px;
-      span{
-        width: 40px;
-        height: 4px;
-        transition: 0.5s;
-        border-radius: 2px;
-        background-color: var(--primary-clr);
-      }
+  .next,.prev{
+    background-color: #ffffff6e;
+    border-radius: 15px 0 0 0;
+    color: var(--primary-clr);
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    margin: auto;
+    height: 45px;
+    top: 0;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .next{
+    right: 10px;
+    transform: translateX(-20px);
+  }
+  .prev{
+    left: 10px;
+    transform: translateX(20px);
   }
   .next:hover{
     span{
@@ -445,7 +400,13 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
     }
   }
   }
-}
+  .slider:hover{
+    .next,.prev{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
 /*==================================================================
                         first carousel END
 ==================================================================*/
@@ -455,7 +416,7 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
                         section-2 occasions
 ==================================================================*/
 .sctn-2.occasions{
-    padding: 50px 0;
+    padding: 20px 0;
     .title-row{
         .title{
             text-transform: capitalize;
@@ -468,7 +429,7 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
         overflow: hidden;
         position: relative;
         height: 200px;
-        border-radius: 10px;
+        border-radius: 0;
         border: 0;
         padding: 10px;
         .card-body{
@@ -492,12 +453,13 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
                 width: fit-content;
                 background: #3e8612;
                 padding: 5px 15px;
-                border-radius: 10px;
+                border-radius: 0;
                 color: #ffffff;
                 font-weight: bold;
                 text-transform: capitalize;
                 position: relative;
                 z-index: 5;
+                background: linear-gradient(45deg, #0f5132, #198754);
             }
         }
         .product{
@@ -884,47 +846,52 @@ header .navbar-2 .nav-2-dropdown-menu-div:hover {
             text-transform: capitalize;
         }
     }
-    .row .col-lg-3{
-      border: 1px solid #ccc;
+    .card-row{
+      display: flex;
+      overflow-x: scroll;
     }
     .card{
-        width: 100%;
-        border-radius: 15px;
+        width: 450px;
+        height: 250px;
         border: 0;
-        padding: 30px 0;
-        margin: auto;
+        overflow: hidden;
         .card-body{
-            padding: 0 70px;
-            .frame-img{
-                width: 100%;
-                filter: drop-shadow(0px 5px 5px #222222c8);
-            }
+          z-index: 1;
+          backdrop-filter: blur(1px);
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          .card-title{
+            font-weight: bold;
+            font-size: 25px;
+          }
+          a{
+            font-size: 17px;
+          }
         }
-        .card-footer{
-            border: 0;
-            background-color: transparent;
-            text-align: center;
-            .card-title{
-                font-weight: bold;
-                text-transform: capitalize;
-                margin-bottom: 0;
-                padding-top: 5px;
-            }
-        }
+       .card-bg{
+        object-fit: cover;
+        transition: 0.5s;
+       }
+       .card-product-img.a{
+        height: 194px;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        transform: translate(42px, -16px);
+       }
     }
-}
-@media screen and (max-width:765px) {
-    .sctn-4.branded{
-      .row .col-lg-3{
-        padding: 0;
+    .card:hover{
+      .card-body{
+        background: #2726268a;
+        color: white;
       }
-        .card{
-            width: 100%;
-            height: 100%;
-            .card-body{
-              padding: 0  10px;
-            }
-        }
+      a{
+        color: white;
+      }
+      .card-bg{
+        transform: scale(1.2);
+      }
     }
 }
 /*==================================================================

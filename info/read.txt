@@ -1,6 +1,7 @@
 refference : 
        https://orbiz.in/
        https://demo-alukas.myshopify.com/
+       https://mannarcraft.com/
 
 
 shopping card guide :
@@ -21,3 +22,18 @@ run laravel project on localhost :
 banner slider :
      https://www.w3schools.com/w3css/w3css_slideshow.asp
      https://www.jqueryscript.net/demo/automatic-fullscreen-carousel/
+
+
+premium customized acrylic mementos
+Craft Multiwood, Customized Mementos
+
+
+button text :
+     Explore Now
+     Shop Now
+     Discover More
+     View Collection
+     Browse Products
+     Check It Out
+
+customized gel stickers

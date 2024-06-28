@@ -87,26 +87,40 @@
     }
 </style>
 <body>
+  <!-- top-bar -->
+  <div class="top-bar d-flex w-100 justify-content-space-between">
+    <div class="container d-flex">
+    <div class="l-div"><p class="msg mb-0"><i class="fa-solid fa-bullhorn"></i> 15% above discount on all products !</p></div>
+    <div class="d-flex r-div">
+      <a href="">about</a>
+      <a href="">contact</a>
+    </div>
+    </div>
+  </div>
+  <!-- top-bar END-->
+
     <header>
     <!-- 1st navbar -->
-    <div class="main-navbar shadow-sm w-100">
+    <div class="main-navbar w-100" id="nav1">
         <div class="top-navbar">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-2 my-auto col-6 d-md-block d-lg-block">
-                        <a href="home" class="brand-name"><img src="assets/img/logo/mediaspot-creation-logo.png" style="height: 50px;" alt=""></a>
+
+                  <div class="col-6 col-md-2 my-auto serch-box-col">
+                    <form role="search">
+                        <div class="input-group">
+                            <input type="search" placeholder="Search your product" class="form-control border-0" />
+                            <button class="btn bg-white" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                    <div class="col-md my-auto d-md-block d-lg-block text-center">
+                        <a href="home" class="brand-name"><img src="assets/img/logo/mediaspot-creation-logo-2.png" style="height: 50px;" alt=""></a>
                     </div>
-                    <div class="col-6 col-md-5 my-auto">
-                        <form role="search">
-                            <div class="input-group">
-                                <input type="search" placeholder="Search your product" class="form-control border-0" />
-                                <button class="btn bg-white" type="submit">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-md-5 my-auto button-options-div">
+                    
+                    <div class="col-md-2 my-auto button-options-div">
 
                       <button class="navbar-toggle hide-lg" onclick="showNav('nav2')"><i class="fa-solid fa-bars"></i></button><!-- navbar toggle for small devices -->
 
@@ -142,15 +156,15 @@
         </div>
     </div>
     <!-- 2nd navbar -->
-    <nav class="navbar navbar-expand-lg navbar-2 pb-0" id="nav2">
+    <nav class="navbar navbar-expand-lg navbar-2" id="nav2">
         <div class="container-fluid">
             <div class="collapse navbar-collapse">
 
               <div class="close-btn-div hide-lg"><button class="nav-close-btn" onclick="hideNav('nav2')"><i class="fa-solid fa-xmark"></i></button></div>
               
-                <ul class="navbar-nav w-100 justify-content-evenly mx-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item"><!-- nav item -->
-                        <div class="nav-link-row d-flex"><a class="nav-link" href="personalized-gifts">PERSONALIZED GIFTS</a><i class="fa-solid hide-lg fa-angle-right"></i></div>
+                        <div class="nav-link-row d-flex"><a class="nav-link" href="personalized-gifts">personalized gifts</a><i class="fa-solid hide-lg fa-angle-right"></i><i class="fa-solid hide-sm hide-md fa-angle-down"></i></div>
                         <div class="nav-2-dropdown-menu-div">
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
@@ -191,7 +205,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><!-- nav item -->
-                      <div class="nav-link-row d-flex"><a class="nav-link" href="awards-&-mementos">AWARDS & MEMENTOS</a><i class="fa-solid hide-lg fa-angle-right"></i></div>
+                      <div class="nav-link-row d-flex"><a class="nav-link" href="awards-&-mementos">awards & mementos</a><i class="fa-solid hide-lg fa-angle-right"></i><i class="fa-solid hide-sm hide-md fa-angle-down"></i></div>
                         <div class="nav-2-dropdown-menu-div">
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
@@ -213,7 +227,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><!-- nav item -->
-                      <div class="nav-link-row d-flex"><a class="nav-link" href="brand-merchandise">BRAND MERCHANDISE</a><i class="fa-solid hide-lg fa-angle-right"></i></div>
+                      <div class="nav-link-row d-flex"><a class="nav-link" href="brand-merchandise">brand merchandise</a><i class="fa-solid hide-lg fa-angle-right"></i><i class="fa-solid hide-sm hide-md fa-angle-down"></i></div>
                         <div class="nav-2-dropdown-menu-div">
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
@@ -262,7 +276,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><!-- nav item -->
-                      <div class="nav-link-row d-flex"><a class="nav-link" href="home-decors">HOME DECORS</a><i class="fa-solid hide-lg fa-angle-right"></i></div>
+                      <div class="nav-link-row d-flex"><a class="nav-link" href="home-decors">home decors</a><i class="fa-solid hide-lg fa-angle-right"></i><i class="fa-solid hide-sm hide-md fa-angle-down"></i></div>
                         <div class="nav-2-dropdown-menu-div">
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
@@ -281,7 +295,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><!-- nav item -->
-                      <div class="nav-link-row d-flex"><a class="nav-link" href="automotive">AUTOMOTIVE</a><i class="fa-solid hide-lg fa-angle-right"></i></div>
+                      <div class="nav-link-row d-flex"><a class="nav-link" href="automotive">automotive</a><i class="fa-solid hide-lg fa-angle-right"></i><i class="fa-solid hide-sm hide-md fa-angle-down"></i></div>
                         <div class="nav-2-dropdown-menu-div automotive">
                             <div class="primary-ul-div">
                                 <ul class="main-menu-ul">
@@ -322,6 +336,10 @@
                     <li class="nav-item hide-lg white-space-sm"></li>
                 </ul>
             </div>
+            <div class="call-mail-div d-flex align-items-center"><!-- call-mail -->
+              <a href="tel:1234" class="call-btn"><img src="assets/img/icons/call.png" alt="">(+91) 123 456 7890</a>
+              <a href="mail.to/info@mediaspot.com" class="mail-btn"><img src="assets/img/icons/mail.png" alt="">info@mediaspot.com</a>
+            </div>
         </div>
     </nav>
     </header>
@@ -331,12 +349,12 @@
                         slider-1
 ==================================================================-->
 <div class="slider mb-0">
-
   <div class="slideshow">
-    <div class="holder" id="holder">
-        <div class="slide-1"><img src="info/2.jpg" alt="img" class="img w-100"></div>
-        <div class="slide-2"><img src="info/1.jpg" alt="img" class="img w-100"></div>
-        <div class="slide-3"><img src="info/2.jpg" alt="img" class="img w-100"></div>
+    <div class="holder">
+        <div class="slide-1"><img src="info/banner-6.jpg" alt="img" class="img w-100"></div>
+        <div class="slide-2"><img src="info/banner-7.jpg" alt="img" class="img w-100"></div>
+        <div class="slide-3"><img src="info/banner-2.jpg" alt="img" class="img w-100"></div>
+        <div class="slide-4"><img src="info/banner-3.jpg" alt="img" class="img w-100"></div>
     </div>
 </div>
 
@@ -344,12 +362,12 @@
 
 </div>
 
-<a href="#" class="prev">Prev</a>
-<a class="next"><lord-icon src="https://cdn.lordicon.com/vduvxizq.json" trigger="click" target=".next" style="width:250px;height:250px"></lord-icon></a>
+<a class="prev"><i class="fa-solid fa-angle-left"></i></a>
+<a class="next"><i class="fa-solid fa-angle-right"></i></a>
 
 </div>
 <script>
-  // Check screen size and load appropriate content
+  /* // Check screen size and load appropriate content
   if (window.matchMedia("(max-width: 768px)").matches) {
       // Load content for small screens
       fetch('bnr-slider-sm.html')
@@ -360,7 +378,7 @@
       fetch('bnr-slider-lg.html')
           .then(response => response.text())
           .then(data => document.getElementById('holder').innerHTML = data);
-  }
+  } */
 </script>
 <!--==================================================================
                         slider-1 END
@@ -498,51 +516,16 @@
         <div class="row title-row pt-5">
             <h2 class="title">#branded gifing corner</h2>
         </div>
-        <div class="row">
+        <div class="row card-row p-2">
 
-            <div class="col-md-6 col-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="assets/img/branded gift/namebadge.png" alt="" class="frame-img">
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-title">branded name badge</div>
-                    </div>
-                </div>
+          <div class="card p-0">
+            <div class="card-body d-flex">
+              <div class="card-title">Exclusive Branded <br>Clocks & Calendars</div>
+              <a href="" class="btn">- Explore</a>
             </div>
-
-            <div class="col-md-6 col-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="assets/img/branded gift/mementom.png" alt="" class="frame-img">
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-title">branded mementos</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="assets/img/branded gift/gel stcker.png" alt="" class="frame-img">
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-title">branded gel stickers</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="assets/img/branded gift/clock.png" alt="" class="frame-img">
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-title">branded calender and clock</div>
-                    </div>
-                </div>
-            </div>
+            <img src="assets/img/branded gift/clock-bg.jpg" alt="" class="card-bg position-absolute w-100 h-100 left-0 top-0"><!-- background -->
+            <img src="assets/img/branded gift/wall-clock.png" alt="" class="card-product-img a position-absolute">
+        </div>
 
         </div>
     </div>
@@ -972,105 +955,114 @@
     </div>
   </footer>
 
+  <!-- sticky navbar function -->
+   <script>
+    window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("nav1");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+   </script>
     <!-- bootsrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- slider js both 2 -->
     <script>
-      // Whenever we load the page, always display the first slide
-var currentSlide = 0;
+      //whenever we load the page, always display the first slide
+var currentSlide = 0
 
-// Here we set how many slides we have using the .length property
-// This is useful because we can use it as our max slide value
-var totalSlides = $('.holder div').length;
+//here we set how many slides we have using the .length property
+//this is useful because we can use it as our max slide value
+var totalSlides = $('.holder div').length
 
-// Function to determine the correct multiplier based on screen size
-var getMultiplier = function() {
-    // Check if the screen width is less than or equal to 768px (mobile view)
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        return 100;
-    }
-    // Default multiplier for larger screens
-    return 90;
-};
 
-// 1. Function that deals with taking us to the next slide
+// 1. a function that deals with taking us to the next slide
 var nextSlide = function() {
-    // Increment our currentSlide value by reassigning it and incrementing it by 1
-    currentSlide = currentSlide + 1;
+  // increment our currentSlide value by reassigning it and increlenting 	   it by 1
+  currentSlide = currentSlide + 1
 
-    // Ensure our slides and numbers do not keep advancing when they reach the last slide
-    if (currentSlide >= totalSlides) {
-        currentSlide = 0;
-    }
+  //a continuacion ponemos este codigo para que nuestras slides y numeros no sigan avanzando cuando lleguen a la 4ta
+  //
+  if (currentSlide >= totalSlides) {
+      currentSlide = 0
+  }
+  // we are going to turn our currentSlide value into a negative vw unit
+  var leftPosition = (-currentSlide * 100) + 'vw'
+  // here we add the 'vw' unit into the end
 
-    // Use the getMultiplier function to determine the correct left position
-    var leftPosition = (-currentSlide * getMultiplier()) + 'vw';
+  // pass the vw unit into our css method below
+  //here we grab the holder and change it to the second slide
+  $('.holder').css('left', leftPosition)
 
-    // Pass the vw unit into our css method below
-    // Here we grab the holder and change it to the next slide
-    $('.holder').css('left', leftPosition);
+  var slideNumber = currentSlide + 1
+  // here we set the text for the steps using currentSlide and total nubmer
+  $('.steps').text(slideNumber + ' / ' + totalSlides)
+}
 
-    var slideNumber = currentSlide + 1;
-    // Here we set the text for the steps using currentSlide and total number
-    $('.steps').text(slideNumber + ' / ' + totalSlides);
-};
+//2. a function that deals with taking us to the previous slide
 
-// 2. Function that deals with taking us to the previous slide
 var previousSlide = function() {
-    // This is identical to our nextSlide function, apart from that we are decrementing the currentSlide value (taking us back rather than forwards)
-    currentSlide = currentSlide - 1;
+  //this is identical to our nextSlide function, apart from that we are decrementing the currentSlide value (taking us back rather than fowards)
+  currentSlide = currentSlide - 1
 
-    // Ensure our slides and numbers do not keep going back when they reach the first slide
-    if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
-    }
+  //a continuacion ponemos este codigo para que nuestras slides y numeros no sigan retrocediendo cuando lleguen al 0
+  //
+  if (currentSlide < 0) {
+      currentSlide = totalSlides - 1
+  }
 
-    // Use the getMultiplier function to determine the correct left position
-    var leftPosition = (-currentSlide * getMultiplier()) + 'vw';
+  var leftPosition = (-currentSlide * 100) + 'vw'
+  $('.holder').css('left', leftPosition)
 
-    $('.holder').css('left', leftPosition);
+  var slideNumber = currentSlide + 1
+  // here we set the text for the steps using currentSlide and total nubmer
+  $('.steps').text(slideNumber + ' / ' + totalSlides)
+}
 
-    var slideNumber = currentSlide + 1;
-    // Here we set the text for the steps using currentSlide and total number
-    $('.steps').text(slideNumber + ' / ' + totalSlides);
-};
-
-// setInterval allows us to run a function every x amount of time
+//setInterval allows us to run a function every x amount of time
 var autoSlide = setInterval(function() {
-    // Here our nextSlide function will be run
-    nextSlide();
-    // Runs every 3 seconds (3000ms)
-}, 3000);
+  // here our nextSlide function will be run
+  nextSlide()
+  // runs every 3seconds (3000ms)
+}, 3000)
 
-// We also have setTimeout, which is the same, but runs only once
+//we also have setTimeout, wich is the same, but runs only once
 
 $('.next').on('click', function() {
-    // This is going to cancel our autoSlide interval function
-    // As the user has taken over control of the slideshow
-    clearInterval(autoSlide);
-    // Here we call the nextSlide function and go to the next slide
-    nextSlide();
-});
+  //this is going to cancel our autoSlide interval function
+  //as the user has taken over control of the slideshow
+  clearInterval(autoSlide)
+  // here we call the nextSlide function and fo to the next slide
+  nextSlide()
+})
+
 
 $('.prev').on('click', function() {
-    clearInterval(autoSlide);
-    previousSlide();
-});
+  clearInterval(autoSlide)
+  previousSlide()
+})
 
 $('body').on('keydown', function(event) {
-    var keyCode = event.keyCode;
-    if (keyCode == 37) {
-        clearInterval(autoSlide);
-        previousSlide();
-    }
-    if (keyCode == 39) {
-        clearInterval(autoSlide);
-        nextSlide();
-    }
-});
-    </script>
-    <script type="text/javascript">
+  var keyCode = event.keyCode
+  if (keyCode == 37) {
+      clearInterval(autoSlide)
+      previousSlide()
+  }
+  if (keyCode == 39) {
+      clearInterval(autoSlide)
+      nextSlide()
+  }
+})
+  </script>
+  <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-36251023-1']);
       _gaq.push(['_setDomainName', 'jqueryscript.net']);
